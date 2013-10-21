@@ -112,12 +112,12 @@ section.col-xs-12.col-md-10.content(ng-controller="BalanceCtrl")
             td(colspan=2)
               ul(class="pagination")
                 li(ng-class="{disabled: !prev_page}")
-                  a(ng-click="goToPage(prev_page)") &laquo;
+                  a(href="", ng-click="goToPage(prev_page)") &laquo;
                 li(ng-repeat="i in [1,pages_count] | rprange",ng-class="{active: current_page==i}")
-                  a(ng-click="goToPage(i)", ng-hide="current_page==i") {{i}}
+                  a(href="", ng-click="goToPage(i)", ng-hide="current_page==i") {{i}}
                   span(ng-show="current_page==i") {{i}}
                 li(ng-class="{disabled: !next_page}")
-                  a(ng-click="goToPage(next_page)") &raquo;
+                  a(href="", ng-click="goToPage(next_page)") &raquo;
               span.spinner(
                 ng-show="loading"
                 rp-spinner="4",
