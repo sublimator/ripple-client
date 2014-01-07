@@ -27,6 +27,7 @@ module.exports = function(grunt) {
               "deps/js/downloadify.js",
               "deps/js/angular/angular.js",
               "deps/js/angular-route/angular-route.js",
+              "deps/js/angular-animate/angular-animate.js",
               "deps/js/store.js/store.js",
               "deps/js/ripple.js",
               "deps/js/ripple-sjcl.js",
@@ -297,6 +298,9 @@ module.exports = function(grunt) {
       deps: {
         files: ['<%= concat.deps.src %>'],
         tasks: ['concat:deps_debug'],
+        // We probably want this VVvv
+        // files: deps, //['<%= concat.deps.src %>'],
+        // tasks: [ 'uglify:deps', 'concat:deps_debug'],
         options: { livereload: true }
       },
       styles: {

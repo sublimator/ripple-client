@@ -31,6 +31,7 @@ require('../services/zipzap');
 // Angular module dependencies
 var appDependencies = [
   'ng',
+  'ngAnimate',
   'ngRoute',
   // Controllers
   'app',

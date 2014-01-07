@@ -1576,3 +1576,29 @@ html.t-trade header nav ul > li.active#nav-advanced > a:after {
     color: red;
   }
 }
+
+.offer-ticker.ng-enter,
+.offer-ticker.ng-leave
+{
+    -webkit-transition: 475ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 475ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 475ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 475ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 475ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    position: relative;
+    display: block;
+}
+
+.offer-ticker.ng-enter.ng-enter-active,
+.offer-ticker.ng-leave {
+    opacity: 1;
+    left: 0;
+    height: 30px;
+}
+
+.offer-ticker.ng-leave.ng-leave-active,
+.offer-ticker.ng-enter {
+    opacity: 0;
+    left: -50px;
+    height: 0px;
+}
